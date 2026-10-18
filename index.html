@@ -1,0 +1,1107 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OakBee — Single-Origin Raw Honey &amp; Migratory Apiaries</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Whisper&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#FCF9F2",
+            "on-surface": "#1A3E26",
+            "on-surface-variant": "#4A5D4E",
+            "surface-container-lowest": "#FFFFFF",
+            "surface-container-low": "#F6F3EC",
+            "surface-container": "#EFECE4",
+            "surface-container-high": "#E5E1D7",
+            "primary": "#1A3E26",
+            "primary-container": "#1A3E26",
+            "on-primary": "#FFFFFF",
+            "secondary": "#B5651D",
+            "secondary-container": "#D67A29",
+            "on-secondary": "#FFFFFF",
+            "amber-accent": "#B5651D",
+            "amber-gold": "#FEA054",
+            "forest-dark": "#022812",
+            "outline-variant": "#C2C8C0",
+            "border-subtle": "rgba(26, 62, 38, 0.12)",
+          },
+          fontFamily: {
+            serif: ["'EB Garamond'", "serif"],
+            sans: ["'Satoshi'", "'Inter'", "sans-serif"],
+            script: ["'Whisper'", "cursive"],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Natural vertical scrolling */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #FCF9F2;
+      color: #1A3E26;
+      font-family: 'Satoshi', 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="bg-surface text-primary antialiased selection:bg-secondary/20 selection:text-primary min-h-screen relative">
+<!-- TOP STICKY NAVBAR -->
+<header class="fixed top-0 left-0 right-0 z-40 w-full bg-surface-container-low/95 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a aria-label="OakBee Home" class="flex items-center shrink-0" href="#">
+<picture>
+<source media="(max-width: 767px)" srcset="logo_mobile_header.svg" class="">
+<img alt="OakBee" class="h-10 sm:h-12 w-auto object-contain py-1" src="logo_web_header.svg">
+</picture>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium tracking-wide">
+<a class="text-primary font-semibold border-b-2 border-primary pb-0.5 hover:text-secondary transition-colors" href="#harvests-section">Our Harvests</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#batch-section">Verify Batch</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#botanical-section">Real Raw Honey</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#apiary-life-section">Apiary Life</a>
+</nav>
+<!-- Right Header Controls -->
+<div class="flex items-center gap-2 sm:gap-4">
+<button aria-label="View Cart" class="flex items-center gap-1.5 px-3 py-2 rounded bg-surface border border-outline-variant text-primary font-medium text-sm hover:bg-surface-container transition-colors" id="cart-btn" onclick="window.openCartDrawer()" type="button">
+<span class="material-symbols-outlined text-[18px] sm:text-[20px] text-primary">shopping_bag</span>
+<span class="">Cart</span>
+<span class="bg-primary text-white rounded-full text-xs px-1.5 py-0.2 font-semibold min-w-[18px] text-center" id="cart-count">0</span>
+</button>
+<a class="inline-flex items-center gap-1.5 sm:gap-2 bg-secondary text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded text-xs sm:text-sm font-semibold tracking-wide hover:bg-secondary-container transition-colors shadow-none" href="https://wa.me/919411123561?text=Hi%2C%20I'd%20like%20to%20know%20more%20about%20Oakbee%20honey%20and%20place%20an%20order." id="header-order-btn" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] sm:text-[18px]">chat</span>
+<span class="hidden sm:inline">WhatsApp Order</span>
+<span class="sm:hidden">Order</span>
+</a>
+<!-- Mobile Hamburger Menu Button -->
+<button aria-label="Toggle navigation menu" class="md:hidden p-2 rounded text-primary hover:bg-surface-container transition-colors focus:outline-none" id="mobile-menu-btn" type="button">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Drawer Menu Dropdown -->
+<div class="hidden md:hidden bg-surface-container-low border-b border-border-subtle px-4 py-4 space-y-2 transition-all" id="mobile-menu">
+<button class="w-full flex items-center justify-between py-2.5 px-3 rounded bg-surface-container text-primary font-semibold text-sm border border-primary/10 mb-2" onclick="window.openCartDrawer()" type="button">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">shopping_bag</span>
+<span class="">Your Apothecary Cart</span>
+</span>
+<span class="bg-primary text-white rounded-full px-2 py-0.5 text-xs font-bold" id="mobile-menu-cart-count">0 Items</span>
+</button>
+<a class="mobile-nav-link block py-2 text-primary font-semibold border-b border-primary/10 text-base" href="#harvests-section">Our Harvests</a>
+<a class="mobile-nav-link block py-2 text-on-surface-variant hover:text-primary text-base" href="#batch-section">Verify Batch</a>
+<a class="mobile-nav-link block py-2 text-on-surface-variant hover:text-primary text-base" href="#botanical-section">Real Raw Honey</a>
+<a class="mobile-nav-link block py-2 text-on-surface-variant hover:text-primary text-base" href="#apiary-life-section">Apiary Life</a>
+</div>
+</header>
+<!-- MAIN VIEWPORT CONTAINER -->
+<main class="w-full pt-20 sm:pt-24 min-h-screen">
+<!-- 1. HERO SECTION -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 lg:py-16 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<!-- Hero Left Column: Copy, WhatsApp CTA & Trust Badges -->
+<div class="lg:col-span-7 flex flex-col items-start pr-0 lg:pr-6 space-y-4 sm:space-y-6">
+<h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary tracking-tight leading-[1.12] sm:leading-[1.1] font-normal">
+          We don't source honey.<br>
+<span class="block sm:inline mt-1 sm:mt-0 text-[1.3em] sm:text-[1.25em] leading-none font-normal" style="font-family: Whisper, cursive; color: rgb(181, 101, 29);">We keep bees.</span>
+</h1>
+<p class="text-sm sm:text-base md:text-lg text-on-surface-variant max-w-xl leading-relaxed">
+          Traceable, single-origin raw honey from our family's migratory hives in the Kumaon forests. Harvested once a year with reverent minimal intervention.
+        </p>
+<!-- WhatsApp Primary CTA & Direct Shipping Note -->
+<div class="pt-1 w-full sm:w-auto">
+<a class="inline-flex items-center justify-center gap-2 bg-secondary text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded text-sm sm:text-base font-semibold tracking-wide hover:bg-secondary-container transition-colors w-full sm:w-auto text-center shadow-none" href="https://wa.me/919411123561?text=Hi%2C%20I'd%20like%20to%20know%20more%20about%20Oakbee%20honey%20and%20place%20an%20order." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span class="">Order via WhatsApp</span>
+</a>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-2.5 flex items-center justify-start gap-1.5 flex-wrap">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">local_shipping</span>
+<span class="">Direct from our family hives to your table • Pan-India dispatch</span>
+</p>
+</div>
+<!-- 3 Trust Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full pt-4 sm:pt-6 border-t border-border-subtle">
+<!-- Badge 1 -->
+<div class="bg-surface-container-lowest p-3.5 sm:p-4 rounded border border-border-subtle flex items-center sm:items-start gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[20px]">nest_multi_room</span>
+</div>
+<div class="space-y-0.5">
+<p class="text-[11px] sm:text-xs uppercase font-semibold text-primary tracking-wider leading-tight">100% OWNED APIARY</p>
+<p class="text-xs sm:text-sm text-on-surface-variant">No bulk traders</p>
+</div>
+</div>
+<!-- Badge 2 -->
+<div class="bg-surface-container-lowest p-3.5 sm:p-4 rounded border border-border-subtle flex items-center sm:items-start gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div class="space-y-0.5">
+<p class="text-[11px] sm:text-xs uppercase font-semibold text-primary tracking-wider leading-tight">KUMAON FOOTHILLS</p>
+<p class="text-xs sm:text-sm text-on-surface-variant">Wild forest bloom</p>
+</div>
+</div>
+<!-- Badge 3 -->
+<div class="bg-surface-container-lowest p-3.5 sm:p-4 rounded border border-border-subtle flex items-center sm:items-start gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="space-y-0.5">
+<p class="text-[11px] sm:text-xs uppercase font-semibold text-primary tracking-wider leading-tight">UNFILTERED &amp; RAW</p>
+<p class="text-xs sm:text-sm text-on-surface-variant">Nylon mesh filter only</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Right Column: Honeycomb Inspection Frame -->
+<div class="lg:col-span-5 relative w-full mt-4 lg:mt-0">
+<div class="bg-surface-container-lowest p-3 sm:p-4 rounded border border-border-subtle relative shadow-none">
+<!-- Lot Badge Overlay -->
+<div class="absolute top-5 left-5 sm:top-6 sm:left-6 z-10 bg-surface/95 text-primary border border-primary/20 text-[10px] sm:text-xs font-semibold tracking-wider uppercase px-2.5 py-1 rounded inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full inline-block shrink-0 bg-secondary"></span>
+<span class="">LOT 2026 • SINGLE ORIGIN • KUMAON RESERVE</span>
+</div>
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden rounded">
+<img alt="Beekeeper inspecting a honeycomb frame filled with bees" class="w-full h-full object-cover rounded" src="hero_image.png">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. TRACEABILITY PROTOCOL -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-10 sm:pb-16">
+<div class="bg-surface-container-lowest rounded border border-border-subtle p-5 sm:p-8">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-border-subtle pb-4 mb-6 gap-2">
+<h2 class="text-xs uppercase tracking-widest font-semibold text-secondary">TRACEABILITY PROTOCOL</h2>
+<span class="text-xs text-on-surface-variant uppercase tracking-wider">ZERO CHEMICALS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+<!-- Card 1 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[22px] text-secondary">psychiatry</span>
+<span class="text-xs font-semibold uppercase tracking-wider text-secondary">01 • BOTANICAL FORAGE</span>
+</div>
+<h3 class="font-serif text-lg sm:text-xl text-primary font-medium">Wild Canopy Flora</h3>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Eucalyptus, Sheesham &amp; Native Foothill Blooms. Free-ranging foraging devoid of commercial pesticides.
+          </p>
+</div>
+<!-- Card 2 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[22px] text-secondary">filter_alt</span>
+<span class="text-xs font-semibold uppercase tracking-wider text-secondary">02 • MINIMAL HANDLING</span>
+</div>
+<h3 class="font-serif text-lg sm:text-xl text-primary font-medium">Unheated Raw Extraction</h3>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Coarsely single-strained by hand through organic muslin cloth. Never pasteurized at 70°C. Natural enzymes preserved.
+          </p>
+</div>
+<!-- Card 3 -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[22px] text-secondary">inventory_2</span>
+<span class="text-xs font-semibold uppercase tracking-wider text-secondary">03 • CELLAR PACKING</span>
+</div>
+<h3 class="font-serif text-lg sm:text-xl text-primary font-medium">Hermetic Glass Bottling</h3>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Direct Apiary Cellar Packing in sealed glass jars. Stored below 22°C to prevent degradation.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. THE SEASONAL HARVESTS -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-14 sm:pb-20" id="harvests-section">
+<div class="text-center max-w-2xl mx-auto space-y-2 mb-8 sm:mb-10 px-2">
+<span class="text-xs uppercase tracking-widest text-secondary font-semibold">LIMITED CELLAR ALLOCATIONS</span>
+<h2 class="font-serif text-2xl sm:text-3xl md:text-4xl text-primary font-medium">The Seasonal Harvests</h2>
+<p class="font-serif italic text-base sm:text-lg text-on-surface-variant">
+        Strict single-varietal pressing determined strictly by seasonal blossom cycles.
+      </p>
+<!-- Free Shipping Pill Banner -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium mt-3 bg-secondary/10 border border-primary/10">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">local_shipping</span>
+<span class="text-primary"><strong class="text-secondary font-bold">Free Shipping</strong> across India on orders ≥ ₹799 <span class="opacity-75 text-[11px] sm:text-xs">(e.g., 2× 500g or 3× 250g)</span></span>
+</div>
+</div>
+<!-- Dual Harvests Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+<!-- CARD 1: Wild Forest Honey (Sold Out) -->
+<div class="bg-surface-container-lowest rounded border border-border-subtle p-5 sm:p-7 flex flex-col justify-between">
+<div>
+<!-- Status Ribbon -->
+<div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+<span class="px-2.5 py-1 text-[10px] sm:text-xs tracking-wider uppercase rounded font-medium bg-primary/10 text-primary border border-primary/20">
+              SOLD OUT • ANNUAL HARVEST COMPLETE
+            </span>
+<span class="text-[10px] sm:text-xs text-on-surface-variant font-mono tracking-wider">
+              KUMAON CANOPY</span>
+</div>
+<!-- Image Container with overlay -->
+<div class="relative aspect-video bg-surface-container rounded overflow-hidden mb-5">
+<img alt="Wild Forest Honey" class="w-full h-full object-cover" src="Wild_forest_honey.png">
+<div class="absolute inset-0 bg-primary/30 backdrop-blur-[1px] flex items-center justify-center">
+
+</div>
+</div>
+<h3 class="font-serif text-2xl sm:text-3xl text-primary font-medium">Wild Forest Honey</h3>
+<p class="font-script text-secondary text-2xl sm:text-3xl mt-0.5 mb-2 leading-none">One forest. One harvest. Once a year.</p>
+<p class="text-xs sm:text-sm text-on-surface-variant mb-5 leading-relaxed">
+            Our spring harvest from the Kumaon forests is sold out. Wild Forest Honey is harvested once a year from our own hives, so the next jars arrive with the spring 2027 harvest.
+          </p>
+<!-- Specification List -->
+
+<!-- Radio options for Spring 2027 reserve -->
+
+</div>
+<!-- Reserve WhatsApp Button -->
+<div class="pt-2">
+<a class="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded border-2 border-secondary text-secondary font-semibold text-xs sm:text-sm hover:bg-secondary/10 transition-colors text-center shadow-none" href="https://wa.me/919411123561?text=Hi!%20I'd%20like%20to%20reserve%20an%20allocation%20for%20OakBee%20Wild%20Forest%20Honey%20(Harvest%202027).%20Size%3A%20500%20gm%20(Est.%20%E2%82%B9499).%20Please%20add%20me%20to%20the%20priority%20waitlist." id="wf-reserve-btn" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span class="">Reserve for 2027 Harvest via WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- CARD 2: Mustard Honey (Available Now) -->
+<div class="bg-surface-container-lowest rounded border border-border-subtle p-5 sm:p-7 flex flex-col justify-between">
+<div>
+<!-- Status Ribbon -->
+<div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+<span class="px-2.5 py-1 text-[10px] sm:text-xs tracking-wider uppercase rounded font-semibold bg-secondary text-white">
+              AVAILABLE NOW • WINTER HARVEST
+            </span>
+<span class="text-[10px] sm:text-xs text-on-surface-variant font-mono tracking-wider">TERAI PLAINS
+            </span>
+</div>
+<!-- Image Container -->
+<div class="relative aspect-video bg-surface-container rounded overflow-hidden mb-5">
+<img alt="Mustard Honey" class="w-full h-full object-cover" src="Mustard_Honey.png">
+</div>
+<h3 class="font-serif text-2xl sm:text-3xl text-primary font-medium">Mustard Honey (Winter Harvest)</h3>
+<p class="font-script text-secondary text-2xl sm:text-3xl mt-0.5 mb-2 leading-none">Golden Fields of Winter</p>
+<p class="text-xs sm:text-sm text-on-surface-variant mb-3 leading-relaxed">
+            Harvested from golden winter blossoms. Pale buttery color, fast-crystallizing, unheated raw nectar with a velvet mouthfeel and delicate floral sweetness.
+          </p>
+<!-- Authenticity Note Callout -->
+
+<!-- Independent Quantity Steppers -->
+<div class="space-y-2.5 mb-5">
+<div class="flex items-center justify-between">
+<span class="text-[11px] sm:text-xs uppercase tracking-wider text-on-surface-variant font-semibold block">SELECT QUANTITIES:</span>
+<span class="text-[11px] text-secondary font-medium">Combine &amp; Save</span>
+</div>
+<!-- Tier 1: 250g Jar -->
+<div class="flex items-center justify-between p-3 rounded border border-border-subtle bg-surface-container-low/40 hover:border-secondary transition-colors">
+<div class="space-y-0.5">
+<div class="text-xs sm:text-sm font-semibold text-primary">250g Jar</div>
+<div class="text-xs text-on-surface-variant"><span class="line-through text-on-surface-variant/70 mr-1.5">₹349</span><span class="font-semibold text-primary">₹299</span></div>
+</div>
+<div class="flex items-center border border-primary/20 rounded bg-surface-container-lowest">
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:bg-surface-container font-semibold transition-colors" onclick="window.changeQty('m_250g', -1)" type="button">-</button>
+<span class="w-8 text-center text-xs sm:text-sm font-semibold font-mono text-primary" id="qty-m_250g">0</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:bg-surface-container font-semibold transition-colors" onclick="window.changeQty('m_250g', 1)" type="button">+</button>
+</div>
+</div>
+<!-- Tier 2: 500g Jar -->
+<div class="flex items-center justify-between p-3 rounded border border-border-subtle bg-surface-container-low/40 hover:border-secondary transition-colors">
+<div class="space-y-0.5">
+<div class="text-xs sm:text-sm font-semibold text-primary">500g Jar</div>
+<div class="text-xs text-on-surface-variant"><span class="line-through text-on-surface-variant/70 mr-1.5">₹499</span><span class="font-semibold text-primary">₹449</span></div>
+</div>
+<div class="flex items-center border border-primary/20 rounded bg-surface-container-lowest">
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:bg-surface-container font-semibold transition-colors" onclick="window.changeQty('m_500g', -1)" type="button">-</button>
+<span class="w-8 text-center text-xs sm:text-sm font-semibold font-mono text-primary" id="qty-m_500g">0</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:bg-surface-container font-semibold transition-colors" onclick="window.changeQty('m_500g', 1)" type="button">+</button>
+</div>
+</div>
+<!-- Tier 3: 2x 500g Combo -->
+<div class="flex items-center justify-between p-3 rounded border border-secondary/60 bg-secondary/5">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="text-xs sm:text-sm font-semibold text-primary">2× 500g Combo</span>
+<span class="text-[10px] px-1.5 py-0.2 rounded font-bold uppercase bg-secondary text-white">BEST VALUE</span>
+</div>
+<div class="text-xs">
+<span class="line-through text-on-surface-variant/70 mr-1.5">₹899</span>
+<span class="font-bold text-primary">₹799</span>
+<span class="text-[10px] text-secondary font-medium ml-1.5">• Free Shipping</span>
+</div>
+</div>
+<div class="flex items-center border border-secondary/40 rounded bg-surface-container-lowest">
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:bg-surface-container font-semibold transition-colors" onclick="window.changeQty('m_combo', -1)" type="button">-</button>
+<span class="w-8 text-center text-xs sm:text-sm font-semibold font-mono text-primary" id="qty-m_combo">0</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:bg-surface-container font-semibold transition-colors" onclick="window.changeQty('m_combo', 1)" type="button">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-2 space-y-2.5">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+<button class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded border-2 border-primary bg-primary text-white font-semibold text-xs sm:text-sm hover:bg-forest-dark transition-colors text-center shadow-none" onclick="window.addSelectedToCart('mustard')" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Cart</span>
+</button>
+<a class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded bg-secondary text-white font-semibold text-xs sm:text-sm hover:bg-secondary-container transition-colors text-center shadow-none" href="https://wa.me/919411123561?text=Hi%2C%20I'd%20like%20to%20know%20more%20about%20Oakbee%20honey%20and%20place%20an%20order." id="mustard-order-btn" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span id="mustard-btn-text" class="">WhatsApp Order</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. VERIFY YOUR JAR -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-14 sm:pb-20" id="batch-section">
+<div class="bg-surface-container-lowest rounded-xl border border-border-subtle p-5 sm:p-8 lg:p-10">
+<div class="text-center max-w-xl mx-auto mb-6 sm:mb-8 space-y-2">
+<span class="material-symbols-outlined text-[28px] sm:text-[32px] text-primary">qr_code_scanner</span>
+<h2 class="font-serif text-2xl sm:text-3xl text-primary font-medium">Verify Your Jar</h2>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+          Enter the batch code printed on your OakBee lid label (e.g., <strong class="font-mono text-primary">OB-WF001</strong>) to inspect harvest provenance.
+        </p>
+</div>
+<!-- Search Input Flex Row -->
+<div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+<input class="w-full h-11 sm:h-12 px-4 rounded border border-border-subtle font-mono text-sm sm:text-base text-primary bg-surface-container-lowest focus:outline-none focus:border-primary uppercase tracking-wider" id="batch-input" placeholder="OB-M001" type="text" value="OB-M001">
+<button class="h-11 sm:h-12 px-6 sm:px-8 bg-primary text-white rounded text-xs sm:text-sm uppercase font-semibold tracking-wider hover:bg-forest-dark transition-colors shrink-0" id="batch-verify-btn" type="button">
+          VERIFY BATCH
+        </button>
+</div>
+<!-- Sample Quick Click Chips -->
+<div class="flex items-center justify-center gap-2 mt-3 text-xs sm:text-sm text-on-surface-variant">
+
+
+
+
+</div>
+<!-- Authenticated Ledger Card -->
+<div class="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-border-subtle bg-surface-container-low p-4 sm:p-6 rounded" id="batch-ledger">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 sm:pb-4 border-b border-border-subtle mb-4 gap-2">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+<span class="text-[11px] sm:text-xs uppercase font-semibold text-primary tracking-widest" id="ledger-title">BATCH #OB-WF001</span>
+</div>
+
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-xs sm:text-sm">
+<div class="space-y-1">
+<span class="uppercase tracking-wider text-on-surface-variant text-[10px] sm:text-xs font-medium">VARIETY</span>
+<p class="font-semibold text-primary text-sm sm:text-base" id="ledger-variety">Wild Forest Honey (Kumaon Reserve)</p>
+</div>
+<div class="space-y-1">
+<span class="uppercase tracking-wider text-on-surface-variant text-[10px] sm:text-xs font-medium">HARVEST WINDOW</span>
+<p class="font-semibold text-primary text-sm sm:text-base" id="ledger-window">April — May 2026</p>
+</div>
+<div class="space-y-1">
+<span class="uppercase tracking-wider text-on-surface-variant text-[10px] sm:text-xs font-medium">BOTANICAL FORAGE</span>
+<p class="font-semibold text-primary text-sm sm:text-base" id="ledger-forage">Sheesham, Khair, Semal, Amaltas etc.</p>
+</div>
+<div class="space-y-1">
+<span class="uppercase tracking-wider text-on-surface-variant text-[10px] sm:text-xs font-medium">PROCESSING</span>
+<p class="font-semibold text-primary text-sm sm:text-base" id="ledger-process">Muslin Strained, Unheated</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. HONESTY OVER HYPE -->
+<section class="w-full py-12 sm:py-16 lg:py-20 text-surface" style="background-color: #1A3E26;">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="text-center max-w-2xl mx-auto space-y-2 mb-8 sm:mb-12">
+<span class="text-xs uppercase tracking-widest font-semibold" style="color: #FEA054;">PHILOSOPHY &amp; TRANSPARENCY</span>
+<h2 class="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-medium">Honesty Over Hype</h2>
+<p class="text-xs sm:text-sm md:text-base text-surface/80 leading-relaxed">
+          Reverence for the honeybee and absolute fidelity to raw unadulterated provenance.
+        </p>
+</div>
+<!-- 4-Card Responsive Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+<!-- Card 1 -->
+<div class="rounded p-5 sm:p-6 border border-white/10 flex flex-col justify-between space-y-4" style="background-color: rgba(2, 40, 18, 0.45);">
+<div class="space-y-3">
+<div class="w-11 h-11 rounded flex items-center justify-center border border-white/10" style="background-color: rgba(255, 255, 255, 0.08); color: #FEA054;">
+<span class="material-symbols-outlined text-[22px]">nest_multi_room</span>
+</div>
+<h3 class="font-serif text-lg sm:text-xl text-white font-medium">Owned Apiary</h3>
+<p class="text-xs sm:text-sm text-surface/75 leading-relaxed">
+              We manage our own colonies. No middleman suppliers or bulk factory buying.
+            </p>
+</div>
+<span class="text-[11px] sm:text-xs uppercase tracking-wider font-semibold pt-3 border-t border-white/10 block" style="color: #FEA054;">100% FAMILY KEPT</span>
+</div>
+<!-- Card 2 -->
+<div class="rounded p-5 sm:p-6 border border-white/10 flex flex-col justify-between space-y-4" style="background-color: rgba(2, 40, 18, 0.45);">
+<div class="space-y-3">
+<div class="w-11 h-11 rounded flex items-center justify-center border border-white/10" style="background-color: rgba(255, 255, 255, 0.08); color: #FEA054;">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<h3 class="font-serif text-lg sm:text-xl text-white font-medium">Honest Labeling</h3>
+<p class="text-xs sm:text-sm text-surface/75 leading-relaxed">
+              No buzzwords or unverifiable marketing hype. What is on the label is what is in the jar.
+            </p>
+</div>
+<span class="text-[11px] sm:text-xs uppercase tracking-wider font-semibold pt-3 border-t border-white/10 block" style="color: #FEA054;">DIRECT AUTHENTICITY</span>
+</div>
+<!-- Card 3 -->
+<div class="rounded p-5 sm:p-6 border border-white/10 flex flex-col justify-between space-y-4" style="background-color: rgba(2, 40, 18, 0.45);">
+<div class="space-y-3">
+<div class="w-11 h-11 rounded flex items-center justify-center border border-white/10" style="background-color: rgba(255, 255, 255, 0.08); color: #FEA054;">
+<span class="material-symbols-outlined text-[22px]">hourglass_empty</span>
+</div>
+<h3 class="font-serif text-lg sm:text-xl text-white font-medium">Seasonal Scarcity</h3>
+<p class="text-xs sm:text-sm text-surface/75 leading-relaxed">
+              When the annual harvest is sold out, it is gone until the next bloom.
+            </p>
+</div>
+<span class="text-[11px] sm:text-xs uppercase tracking-wider font-semibold pt-3 border-t border-white/10 block" style="color: #FEA054;">NO FACTORY BLENDS</span>
+</div>
+<!-- Card 4 -->
+<div class="rounded p-5 sm:p-6 border border-white/10 flex flex-col justify-between space-y-4" style="background-color: rgba(2, 40, 18, 0.45);">
+<div class="space-y-3">
+<div class="w-11 h-11 rounded flex items-center justify-center border border-white/10" style="background-color: rgba(255, 255, 255, 0.08); color: #FEA054;">
+<span class="material-symbols-outlined text-[22px]">forest</span>
+</div>
+<h3 class="font-serif text-lg sm:text-xl text-white font-medium">Forest First</h3>
+<p class="text-xs sm:text-sm text-surface/75 leading-relaxed">
+              Our hives move with the seasons: Kumaon forests in spring, mustard fields in winter.
+            </p>
+</div>
+<span class="text-[11px] sm:text-xs uppercase tracking-wider font-semibold pt-3 border-t border-white/10 block" style="color: #FEA054;">BIODYNAMIC FORAGING</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. BOTANICAL PRIMER & ACCORDIONS -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 sm:py-16 lg:py-20" id="botanical-section">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+<!-- Left: Educational Primer Copy -->
+<div class="lg:col-span-5 space-y-3 sm:space-y-4">
+<span class="text-xs uppercase tracking-widest text-secondary font-semibold">BOTANICAL PRIMER</span>
+<h2 class="font-serif text-2xl sm:text-3xl text-primary leading-tight font-medium">
+          Understanding Real Raw Honey &amp; The Industrial Deception
+        </h2>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+          Supermarket honey is heavily pasteurized at 70°C and micro-filtered, killing beneficial invertase enzymes and stripping natural pollen.
+        </p>
+<div class="bg-surface-container-lowest p-4 sm:p-5 rounded border border-border-subtle space-y-2">
+<div class="flex items-center gap-2 text-primary font-semibold text-xs sm:text-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">science</span>
+<span class="">Why Supermarket Honey Never Crystallizes:</span>
+</div>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Industrial processors intentionally strip pollen grains so honey cannot form crystallization nuclei. Real raw honey is biologically alive and naturally crystallizes.
+          </p>
+</div>
+</div>
+<!-- Right: Interactive Accordion FAQs -->
+<div class="lg:col-span-7 space-y-3">
+<!-- Accordion 1 (Default Open) -->
+<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden">
+<button class="accordion-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between font-serif text-base sm:text-lg text-primary gap-3 font-medium" data-target="acc-1" type="button">
+<span class="">Why does real raw honey crystallize?</span>
+<span class="material-symbols-outlined text-[20px] transition-transform rotate-180 shrink-0 text-secondary">expand_more</span>
+</button>
+<div class="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-on-surface-variant leading-relaxed border-t border-border-subtle/40 pt-3" id="acc-1">
+            Crystallization is spontaneous physical separation of glucose from supersaturated natural flower nectar. Natural honeys high in glucose (like our Mustard Honey) form fine, velvety crystals within weeks of extraction in colder temperatures. Real raw honey is biologically alive. Place jar in warm water (&lt;40°C) to liquefy if preferred.
+          </div>
+</div>
+<!-- Accordion 2 -->
+<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden">
+<button class="accordion-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between font-serif text-base sm:text-lg text-primary gap-3 font-medium" data-target="acc-2" type="button">
+<span class="">What is "The Industrial Deception"?</span>
+<span class="material-symbols-outlined text-[20px] transition-transform shrink-0 text-secondary">expand_more</span>
+</button>
+<div class="hidden px-4 sm:px-5 pb-5 text-xs sm:text-sm text-on-surface-variant leading-relaxed border-t border-border-subtle/40 pt-3" id="acc-2">
+            Commercial packers buy aggregate drums from unknown sources, ultra-pasteurize them, and filter out all pollen to hide geographical origin and prevent crystallization, rendering medicinal honey into dead commercial sugar syrup.
+          </div>
+</div>
+<!-- Accordion 3 -->
+<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden">
+<button class="accordion-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between font-serif text-base sm:text-lg text-primary gap-3 font-medium" data-target="acc-3" type="button">
+<span class="">What does "Migratory Beekeeping" mean?</span>
+<span class="material-symbols-outlined text-[20px] transition-transform shrink-0 text-secondary">expand_more</span>
+</button>
+<div class="hidden px-4 sm:px-5 pb-5 text-xs sm:text-sm text-on-surface-variant leading-relaxed border-t border-border-subtle/40 pt-3" id="acc-3">
+            Rather than confining bees in one spot and feeding them refined sugar when flowers fade, we move our hives overnight following natural floral blooming cycles from high Kumaon forests to winter golden plains.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. APIARY LIFE IN ACTION -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-16 sm:pb-24" id="apiary-life-section">
+<div class="text-center max-w-2xl mx-auto space-y-2 mb-8 sm:mb-10 px-2">
+<span class="text-xs uppercase tracking-widest text-secondary font-semibold">VISUAL DOCUMENTATION</span>
+<h2 class="font-serif text-2xl sm:text-3xl text-primary font-medium">Apiary Life in Action</h2>
+<p class="text-xs sm:text-sm text-on-surface-variant">
+        Follow our migrations and harvests on Instagram <a class="text-primary font-semibold underline underline-offset-2" href="https://instagram.com" rel="noopener noreferrer" target="_blank">@oakbeehoney</a>
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+<!-- Video Card 1 -->
+<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Post-Monsoon Hive Inspection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="Hive_Inspection_reel.png">
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-colors shadow">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+</div>
+<span class="absolute bottom-3 right-3 bg-primary/80 text-white px-2 py-0.5 rounded text-[11px] font-mono">0:16</span>
+</div>
+<div class="p-4 sm:p-5">
+<span class="text-[10px] sm:text-xs uppercase tracking-wider text-secondary font-semibold">BROOD INSPECTION</span>
+<h3 class="font-serif text-base sm:text-lg text-primary mt-1 mb-1.5 font-medium">Post-Monsoon Hive Inspection</h3>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Checked frames today. First good pollen in weeks - colonies are building back up after a tough monsoon.
+          </p>
+</div>
+</div>
+<!-- Video Card 2 -->
+<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Hand-Straining Raw Honey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="Straining_reel.png">
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-colors shadow">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+</div>
+<span class="absolute bottom-3 right-3 bg-primary/80 text-white px-2 py-0.5 rounded text-[11px] font-mono">0:10</span>
+</div>
+<div class="p-4 sm:p-5">
+<span class="text-[10px] sm:text-xs uppercase tracking-wider text-secondary font-semibold">APOTHECARY FILTRATION</span>
+<h3 class="font-serif text-base sm:text-lg text-primary mt-1 mb-1.5 font-medium">Hand-Straining Raw Honey</h3>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Honey passes through one coarse filter. Just enough to remove wax and debris - nothing that affects what makes it raw.
+          </p>
+</div>
+</div>
+<!-- Video Card 3 -->
+<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Night Transport for Winter Forage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="Migration_reel.png">
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-colors shadow">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+</div>
+<span class="absolute bottom-3 right-3 bg-primary/80 text-white px-2 py-0.5 rounded text-[11px] font-mono">0:19</span>
+</div>
+<div class="p-4 sm:p-5">
+<span class="text-[10px] sm:text-xs uppercase tracking-wider text-secondary font-semibold">COLONY MIGRATION</span>
+<h3 class="font-serif text-base sm:text-lg text-primary mt-1 mb-1.5 font-medium">Night Transport for Winter Forage</h3>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Two pickups, eight hours, and a rain break. Moving hives when there's no easy road to follow seasonal blooms.
+          </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- APOTHECARY CART SLIDE-OVER DRAWER & BACKDROP -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none" id="cart-backdrop" onclick="window.closeCartDrawer()"></div>
+<aside class="fixed top-0 right-0 z-50 h-full w-full max-w-md bg-surface text-primary shadow-2xl border-l border-border-subtle flex flex-col justify-between transition-transform duration-300 translate-x-full" id="cart-drawer">
+<!-- Cart Header -->
+<div class="p-4 sm:p-5 border-b border-border-subtle flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</div>
+<div>
+<h3 class="font-serif text-lg sm:text-xl text-primary leading-tight font-medium">Your Apothecary Cart</h3>
+<p class="text-xs text-on-surface-variant" id="cart-header-subtitle">0 items selected</p>
+</div>
+</div>
+<button aria-label="Close Cart" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="window.closeCartDrawer()" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Free Shipping Dynamic Progress Tracker -->
+<div class="bg-secondary/10 px-4 py-3 border-b border-primary/10">
+<div class="flex items-center justify-between text-xs font-medium mb-1.5">
+<span class="text-primary font-semibold flex items-center gap-1.5" id="free-shipping-label"><span class="material-symbols-outlined text-[16px] text-secondary">local_shipping</span><span class="">Add ₹799 more for Free Shipping</span></span>
+<span class="text-secondary font-mono font-bold" id="free-shipping-percent-text">0%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary transition-all duration-300" id="free-shipping-progress-bar" style="width: 0%;"></div>
+</div>
+</div>
+<!-- Cart Items Scroll Area -->
+<div class="flex-1 overflow-y-auto p-4 sm:p-5 space-y-3.5" id="cart-items-container"><div class="text-center py-12 px-4 space-y-3">
+        <div class="w-12 h-12 mx-auto rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+          <span class="material-symbols-outlined text-[24px]">shopping_basket</span>
+        </div>
+        <h4 class="font-serif text-lg font-semibold text-primary">Your Cart is Empty</h4>
+        <p class="text-xs text-on-surface-variant max-w-xs mx-auto leading-relaxed">Explore our seasonal raw honey harvests below.</p>
+        <button type="button" onclick="window.closeCartDrawer()" class="mt-2 inline-flex items-center gap-1 bg-secondary text-white px-4 py-2 rounded text-xs font-semibold hover:bg-secondary-container transition-colors">Browse Harvests</button>
+      </div></div>
+<!-- Cart Summary & WhatsApp Checkout -->
+<div class="border-t border-border-subtle bg-surface-container-lowest p-4 sm:p-5 space-y-3">
+<div class="space-y-1.5 text-xs sm:text-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span class="">Subtotal:</span>
+<span class="font-mono font-semibold text-primary" id="cart-subtotal">₹0</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="">Pan-India Safe Packing &amp; Dispatch:</span>
+<span class="font-semibold text-secondary" id="cart-shipping">₹0</span>
+</div>
+<div class="flex justify-between text-sm sm:text-base font-semibold text-primary pt-2 border-t border-border-subtle">
+<span class="">Estimated Total:</span>
+<span class="font-mono font-bold text-secondary text-base sm:text-lg" id="cart-grand-total">₹0</span>
+</div>
+</div>
+<a class="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded bg-secondary text-white font-semibold text-sm hover:bg-secondary-container transition-colors shadow text-center opacity-50 pointer-events-none" href="#" id="cart-checkout-whatsapp-btn" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span class="">Checkout via WhatsApp</span>
+</a>
+<div class="flex items-center justify-between pt-1">
+<button class="text-[11px] text-on-surface-variant hover:text-red-700 underline underline-offset-2 transition-colors" onclick="window.clearCart()" type="button">Clear cart</button>
+<button class="text-[11px] text-secondary hover:underline underline-offset-2 font-medium" onclick="window.closeCartDrawer()" type="button">Continue exploring harvests →</button>
+</div>
+</div>
+</aside>
+<!-- Interactive Toast Notification -->
+<div class="fixed bottom-6 right-6 z-50 bg-primary text-white px-4 py-3 rounded shadow-lg border border-white/10 flex items-center gap-2.5 text-xs sm:text-sm transition-all duration-300 opacity-0 pointer-events-none translate-y-4" id="cart-toast">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span id="cart-toast-msg" class="">Added to your apothecary cart</span>
+</div>
+<!-- FOOTER -->
+<footer class="w-full py-10 sm:py-14 border-t border-white/10 text-surface" style="background-color: #1A3E26;">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pb-8 border-b border-white/10">
+<!-- Left: Footer Logo & Tagline -->
+<div class="md:col-span-6 space-y-3">
+<img alt="OakBee" class="h-10 sm:h-12 w-auto object-contain brightness-0 invert" src="Logo_web_footer.svg">
+<p class="font-serif italic text-sm sm:text-base text-surface/90">
+          We don't source honey. <span class="text-xl sm:text-2xl not-italic font-normal" style="font-family: Whisper, cursive; color: rgb(181, 101, 29);">We keep bees.</span>
+</p>
+</div>
+<!-- Right: Provenance & Regulatory Links -->
+<div class="md:col-span-6 flex flex-col md:flex-row md:justify-end gap-6 sm:gap-10 text-xs sm:text-sm">
+<div class="flex flex-col gap-2"><span class="text-[11px] uppercase tracking-wider text-surface/50 font-semibold">Provenance &amp; Safety</span>
+<span class="text-surface/80">FSSAI - 22626038000444</span>
+<a href="#batch-section" class="text-surface/80 hover:text-white hover:underline transition-colors">Traceability Batch Search</a>
+<a href="https://wa.me/919411123561?text=Hi%2C%20I'd%20like%20to%20know%20more%20about%20Oakbee%20honey." target="_blank" rel="noopener noreferrer" class="text-surface/80 hover:text-white hover:underline transition-colors">Direct WhatsApp Support</a></div>
+</div>
+</div>
+<!-- Copyright & Bottom Tag -->
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-xs text-surface/50">
+<p class="">© 2026 OakBee Apiaries. All rights reserved.</p>
+<p class="uppercase tracking-widest text-[11px]">Modern Apothecary • Single Origin</p>
+</div>
+</div>
+</footer>
+<!-- SCRIPTS: Cart, WhatsApp Checkout, Batch Lookup, Accordions -->
+<script>
+  // Mobile Menu Toggle
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+
+  // Batch Verification Lookup Simulation
+  const sampleLedgers = {
+    'OB-M001': {
+      title: 'BATCH #OB-M001 • LEDGER',
+      variety: 'Mustard Honey (Winter Harvest)',
+      window: 'Nov 2025 — Jan 2026',
+      forage: 'Brassica Napus & Flora',
+      process: 'Single Muslin Filtered'
+    },
+    'OB-WF001': {
+      title: 'BATCH #OB-WF001 • LEDGER',
+      variety: 'Wild Forest Honey (Kumaon Reserve)',
+      window: 'April — May 2026',
+      forage: 'Oak, Buransh & Himalayan Flora',
+      process: 'Muslin Strained, Unheated'
+    }
+  };
+
+  const batchInput = document.getElementById('batch-input');
+  const verifyBtn = document.getElementById('batch-verify-btn');
+  const ledgerTitle = document.getElementById('ledger-title');
+  const ledgerVariety = document.getElementById('ledger-variety');
+  const ledgerWindow = document.getElementById('ledger-window');
+  const ledgerForage = document.getElementById('ledger-forage');
+  const ledgerProcess = document.getElementById('ledger-process');
+
+  function executeBatchLookup(code) {
+    const clean = code.trim().toUpperCase();
+    const match = sampleLedgers[clean];
+    if (match && ledgerTitle) {
+      ledgerTitle.textContent = match.title;
+      ledgerVariety.textContent = match.variety;
+      ledgerWindow.textContent = match.window;
+      ledgerForage.textContent = match.forage;
+      ledgerProcess.textContent = match.process;
+      if (batchInput) batchInput.value = clean;
+    } else if (ledgerTitle) {
+      ledgerTitle.textContent = `BATCH #${clean} • ARCHIVE LEDGER`;
+      ledgerVariety.textContent = 'Migratory Apiary Harvest';
+      ledgerWindow.textContent = 'Archived Seasonal Window';
+      ledgerForage.textContent = 'Kumaon Regional Flora';
+      ledgerProcess.textContent = 'Raw Hand Filtered';
+    }
+  }
+
+  if (verifyBtn && batchInput) {
+    verifyBtn.addEventListener('click', () => executeBatchLookup(batchInput.value));
+  }
+
+  document.querySelectorAll('.sample-batch').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const code = e.currentTarget.getAttribute('data-code');
+      executeBatchLookup(code);
+    });
+  });
+
+  // Accordion Toggle
+  document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const targetId = trigger.getAttribute('data-target');
+      const targetPanel = document.getElementById(targetId);
+      const arrow = trigger.querySelector('.material-symbols-outlined');
+      const isHidden = targetPanel.classList.contains('hidden');
+
+      document.querySelectorAll('[id^="acc-"]').forEach(p => p.classList.add('hidden'));
+      document.querySelectorAll('.accordion-trigger .material-symbols-outlined').forEach(i => i.classList.remove('rotate-180'));
+
+      if (isHidden) {
+        targetPanel.classList.remove('hidden');
+        if (arrow) arrow.classList.add('rotate-180');
+      }
+    });
+  });
+
+  // Wild Forest reserve link update
+  window.updateReserveLink = function(tierText) {
+    const btn = document.getElementById('wf-reserve-btn');
+    if (btn) {
+      const msg = `Hi! I'd like to reserve an allocation for OakBee Wild Forest Honey (Harvest 2027).\nSelected Size: ${tierText}\nPlease add me to the priority waitlist.`;
+      btn.href = `https://wa.me/919411123561?text=${encodeURIComponent(msg)}`;
+    }
+  };
+</script>
+<script>
+(function() {
+  const catalog = {
+    m_250g: { id: 'm_250g', name: 'Mustard Honey (Winter)', sizeLabel: '250 gm', spec: '250g Glass Jar', price: 299, image: 'Mustard_Honey.png' },
+    m_500g: { id: 'm_500g', name: 'Mustard Honey (Winter)', sizeLabel: '500 gm', spec: '500g Glass Jar', price: 449, image: 'Mustard_Honey.png' },
+    m_combo: { id: 'm_combo', name: 'Mustard Honey (Winter)', sizeLabel: '2× 500 gm Combo', spec: '2× 500g Combo Pack', price: 799, image: 'Mustard_Honey.png' }
+  };
+
+  const pendingSelections = {
+    m_250g: 0,
+    m_500g: 0,
+    m_combo: 0
+  };
+
+  let cart = [];
+
+  function formatPrice(num) {
+    return num.toLocaleString('en-IN');
+  }
+
+  function generateMustardWhatsAppMessage(selectedItems, totalAmount) {
+    if (selectedItems.length === 1) {
+      const item = selectedItems[0];
+      const jarText = item.qty === 1 ? '1 jar' : `${item.qty} jars`;
+      return `Hi! I'd like to order OakBee Mustard Honey.\nSize: ${item.sizeLabel}\nQuantity: ${jarText}\nTotal: ₹${formatPrice(totalAmount)}\nPlease confirm availability and share payment details.`;
+    }
+    const itemsList = selectedItems.map(item => {
+      const jarText = item.qty === 1 ? '1 jar' : `${item.qty} jars`;
+      return `- Size: ${item.sizeLabel} | Quantity: ${jarText} (₹${formatPrice(item.price * item.qty)})`;
+    }).join('\n');
+    return `Hi! I'd like to order OakBee Mustard Honey.\nItems:\n${itemsList}\nTotal: ₹${formatPrice(totalAmount)}\nPlease confirm availability and share payment details.`;
+  }
+
+  window.changeQty = function(itemKey, delta) {
+    pendingSelections[itemKey] = Math.max(0, (pendingSelections[itemKey] || 0) + delta);
+    const el = document.getElementById('qty-' + itemKey);
+    if (el) el.textContent = pendingSelections[itemKey];
+    updateMustardCardActionState();
+  };
+
+  function updateMustardCardActionState() {
+    const mBtn = document.getElementById('mustard-order-btn');
+    const mText = document.getElementById('mustard-btn-text');
+    const headerOrderBtn = document.getElementById('header-order-btn');
+    
+    const count250 = pendingSelections.m_250g;
+    const count500 = pendingSelections.m_500g;
+    const countCombo = pendingSelections.m_combo;
+    const total = (count250 * 299) + (count500 * 449) + (countCombo * 799);
+
+    if (mText) {
+      mText.textContent = total > 0 ? `WhatsApp (₹${formatPrice(total)})` : 'WhatsApp Order';
+    }
+
+    const selectedItems = [];
+    if (count250 > 0) selectedItems.push({ sizeLabel: '250 gm', qty: count250, price: 299 });
+    if (count500 > 0) selectedItems.push({ sizeLabel: '500 gm', qty: count500, price: 449 });
+    if (countCombo > 0) selectedItems.push({ sizeLabel: '2× 500 gm Combo', qty: countCombo, price: 799 });
+
+    if (mBtn) {
+      if (selectedItems.length > 0) {
+        const msg = generateMustardWhatsAppMessage(selectedItems, total);
+        mBtn.href = `https://wa.me/919411123561?text=${encodeURIComponent(msg)}`;
+      } else {
+        const defaultMsg = "Hi, I'd like to know more about Oakbee honey and place an order.";
+        mBtn.href = `https://wa.me/919411123561?text=${encodeURIComponent(defaultMsg)}`;
+      }
+    }
+
+    if (headerOrderBtn) {
+      if (cart.length > 0) {
+        const cartSelections = cart.map(c => {
+          const d = catalog[c.id];
+          return { sizeLabel: d.sizeLabel, qty: c.qty, price: d.price };
+        });
+        const cartTotal = cart.reduce((sum, c) => sum + (catalog[c.id].price * c.qty), 0);
+        const freeThreshold = 799;
+        const grandTotal = cartTotal >= freeThreshold || cartTotal === 0 ? cartTotal : cartTotal + 99;
+        const msg = generateMustardWhatsAppMessage(cartSelections, grandTotal);
+        headerOrderBtn.href = `https://wa.me/919411123561?text=${encodeURIComponent(msg)}`;
+      } else if (selectedItems.length > 0) {
+        const msg = generateMustardWhatsAppMessage(selectedItems, total);
+        headerOrderBtn.href = `https://wa.me/919411123561?text=${encodeURIComponent(msg)}`;
+      } else {
+        headerOrderBtn.href = "https://wa.me/919411123561?text=Hi%2C%20I'd%20like%20to%20know%20more%20about%20Oakbee%20honey%20and%20place%20an%20order.";
+      }
+    }
+  }
+
+  window.addSelectedToCart = function(source) {
+    let addedCount = 0;
+    if (source === 'mustard') {
+      const totalPending = pendingSelections.m_250g + pendingSelections.m_500g + pendingSelections.m_combo;
+      if (totalPending === 0) {
+        pendingSelections.m_combo = 1;
+        const comboQtyEl = document.getElementById('qty-m_combo');
+        if (comboQtyEl) comboQtyEl.textContent = '1';
+        updateMustardCardActionState();
+      }
+
+      ['m_250g', 'm_500g', 'm_combo'].forEach(id => {
+        const qty = pendingSelections[id];
+        if (qty > 0) {
+          const existing = cart.find(i => i.id === id);
+          if (existing) existing.qty += qty;
+          else cart.push({ id, qty });
+          addedCount += qty;
+        }
+      });
+    }
+
+    if (addedCount > 0) {
+      showToast(`Added ${addedCount} harvest item${addedCount > 1 ? 's' : ''} to cart`);
+      renderCart();
+      openCartDrawer();
+    } else {
+      showToast('Please select at least 1 jar to add');
+    }
+  };
+
+  window.openCartDrawer = function() {
+    renderCart();
+    const backdrop = document.getElementById('cart-backdrop');
+    const drawer = document.getElementById('cart-drawer');
+    if (backdrop && drawer) {
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100');
+      drawer.classList.remove('translate-x-full');
+      drawer.classList.add('translate-x-0');
+    }
+  };
+
+  window.closeCartDrawer = function() {
+    const backdrop = document.getElementById('cart-backdrop');
+    const drawer = document.getElementById('cart-drawer');
+    if (backdrop && drawer) {
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      drawer.classList.remove('translate-x-0');
+      drawer.classList.add('translate-x-full');
+    }
+  };
+
+  window.updateCartItemQty = function(id, delta) {
+    const item = cart.find(i => i.id === id);
+    if (!item) return;
+    item.qty += delta;
+    if (item.qty <= 0) {
+      cart = cart.filter(i => i.id !== id);
+    }
+    renderCart();
+  };
+
+  window.removeCartItem = function(id) {
+    cart = cart.filter(i => i.id !== id);
+    renderCart();
+  };
+
+  window.clearCart = function() {
+    cart = [];
+    renderCart();
+    showToast('Your cart has been cleared');
+  };
+
+  function showToast(message) {
+    const toast = document.getElementById('cart-toast');
+    const msgEl = document.getElementById('cart-toast-msg');
+    if (toast && msgEl) {
+      msgEl.textContent = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      }, 2600);
+    }
+  }
+
+  function renderCart() {
+    const countEl = document.getElementById('cart-count');
+    const mobileCountEl = document.getElementById('mobile-menu-cart-count');
+    const subtitleEl = document.getElementById('cart-header-subtitle');
+    const container = document.getElementById('cart-items-container');
+    const subtotalEl = document.getElementById('cart-subtotal');
+    const shippingEl = document.getElementById('cart-shipping');
+    const totalEl = document.getElementById('cart-grand-total');
+    const whatsappBtn = document.getElementById('cart-checkout-whatsapp-btn');
+    const progressBar = document.getElementById('free-shipping-progress-bar');
+    const shippingLabel = document.getElementById('free-shipping-label');
+    const percentText = document.getElementById('free-shipping-percent-text');
+
+    let totalItems = 0;
+    let subtotal = 0;
+
+    cart.forEach(c => {
+      totalItems += c.qty;
+      const itemDef = catalog[c.id];
+      if (itemDef) subtotal += (itemDef.price * c.qty);
+    });
+
+    if (countEl) countEl.textContent = totalItems;
+    if (mobileCountEl) mobileCountEl.textContent = `${totalItems} Items`;
+    if (subtitleEl) subtitleEl.textContent = `${totalItems} item${totalItems === 1 ? '' : 's'} selected`;
+
+    const freeThreshold = 799;
+    const isFree = subtotal >= freeThreshold;
+    const shippingCost = (subtotal === 0 || isFree) ? 0 : 99;
+    const grandTotal = subtotal + shippingCost;
+
+    if (progressBar && shippingLabel && percentText) {
+      if (subtotal === 0) {
+        progressBar.style.width = '0%';
+        percentText.textContent = '0%';
+        shippingLabel.innerHTML = '<span class="material-symbols-outlined text-[16px] text-secondary">local_shipping</span><span>Add ₹799 more for Free Shipping</span>';
+      } else if (isFree) {
+        progressBar.style.width = '100%';
+        percentText.textContent = '100%';
+        shippingLabel.innerHTML = '<span class="material-symbols-outlined text-[16px] text-secondary">verified</span><span class="text-primary font-bold">Free Shipping Unlocked across India!</span>';
+      } else {
+        const diff = freeThreshold - subtotal;
+        const pct = Math.min(100, Math.round((subtotal / freeThreshold) * 100));
+        progressBar.style.width = `${pct}%`;
+        percentText.textContent = `${pct}%`;
+        shippingLabel.innerHTML = `<span class="material-symbols-outlined text-[16px] text-secondary">local_shipping</span><span>Add ₹${diff} more for Free Shipping</span>`;
+      }
+    }
+
+    if (subtotalEl) subtotalEl.textContent = `₹${formatPrice(subtotal)}`;
+    if (shippingEl) shippingEl.textContent = (subtotal === 0) ? '₹0' : (isFree ? 'FREE' : `₹${shippingCost}`);
+    if (totalEl) totalEl.textContent = `₹${formatPrice(grandTotal)}`;
+
+    if (!container) return;
+
+    if (cart.length === 0) {
+      container.innerHTML = `<div class="text-center py-12 px-4 space-y-3">
+        <div class="w-12 h-12 mx-auto rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+          <span class="material-symbols-outlined text-[24px]">shopping_basket</span>
+        </div>
+        <h4 class="font-serif text-lg font-semibold text-primary">Your Cart is Empty</h4>
+        <p class="text-xs text-on-surface-variant max-w-xs mx-auto leading-relaxed">Explore our seasonal raw honey harvests below.</p>
+        <button type="button" onclick="window.closeCartDrawer()" class="mt-2 inline-flex items-center gap-1 bg-secondary text-white px-4 py-2 rounded text-xs font-semibold hover:bg-secondary-container transition-colors">Browse Harvests</button>
+      </div>`;
+      if (whatsappBtn) {
+        whatsappBtn.classList.add('opacity-50', 'pointer-events-none');
+        whatsappBtn.href = '#';
+      }
+      updateMustardCardActionState();
+      return;
+    }
+
+    if (whatsappBtn) {
+      whatsappBtn.classList.remove('opacity-50', 'pointer-events-none');
+      const cartItems = cart.map(c => {
+        const d = catalog[c.id];
+        return { sizeLabel: d.sizeLabel, qty: c.qty, price: d.price };
+      });
+      const msg = generateMustardWhatsAppMessage(cartItems, grandTotal);
+      whatsappBtn.href = `https://wa.me/919411123561?text=${encodeURIComponent(msg)}`;
+    }
+
+    container.innerHTML = cart.map(c => {
+      const d = catalog[c.id];
+      const lineTotal = d.price * c.qty;
+      return `<div class="p-3 sm:p-3.5 rounded border border-border-subtle bg-surface-container-lowest flex gap-3 items-center">
+        <div class="w-14 h-14 rounded overflow-hidden bg-surface-container shrink-0 border border-border-subtle/50">
+          <img src="${d.image}" alt="${d.name}" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex-1 min-w-0 space-y-0.5">
+          <div class="flex items-start justify-between gap-1">
+            <h4 class="font-serif text-xs sm:text-sm font-semibold text-primary truncate">${d.name}</h4>
+            <button type="button" onclick="window.removeCartItem('${d.id}')" class="text-on-surface-variant/70 hover:text-red-700 text-xs p-0.5" title="Remove">
+              <span class="material-symbols-outlined text-[16px]">delete</span>
+            </button>
+          </div>
+          <div class="text-[11px] text-on-surface-variant">${d.spec}</div>
+          <div class="flex items-center justify-between pt-1.5">
+            <div class="flex items-center border border-primary/20 rounded bg-surface-container-low">
+              <button type="button" onclick="window.updateCartItemQty('${d.id}', -1)" class="w-6 h-6 flex items-center justify-center text-primary font-bold hover:bg-surface-container text-xs">-</button>
+              <span class="w-6 text-center text-xs font-semibold font-mono text-primary">${c.qty}</span>
+              <button type="button" onclick="window.updateCartItemQty('${d.id}', 1)" class="w-6 h-6 flex items-center justify-center text-primary font-bold hover:bg-surface-container text-xs">+</button>
+            </div>
+            <div class="font-mono font-bold text-xs sm:text-sm text-primary">₹${formatPrice(lineTotal)}</div>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+
+    updateMustardCardActionState();
+  }
+
+  renderCart();
+  updateMustardCardActionState();
+})();
+</script>
+
+
+
+
+</body></html>
