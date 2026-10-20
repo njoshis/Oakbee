@@ -62,8 +62,8 @@
 <!-- Brand Logo -->
 <a aria-label="OakBee Home" class="flex items-center shrink-0" href="#">
 <picture>
-<source media="(max-width: 767px)" srcset="logo_mobile_header.svg" class="">
-<img alt="OakBee" class="h-10 sm:h-12 w-auto object-contain py-1" src="logo_web_header.svg">
+<source class="" media="(max-width: 767px)" srcset="logo_mobile_header.svg">
+<img alt="OakBee" class="h-10 sm:h-12 md:h-14 w-auto object-contain" src="logo_web_header.svg">
 </picture>
 </a>
 <!-- Desktop Navigation Links -->
@@ -109,18 +109,26 @@
 <!-- MAIN VIEWPORT CONTAINER -->
 <main class="w-full pt-20 sm:pt-24 min-h-screen">
 <!-- 1. HERO SECTION -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 lg:py-16 w-full">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-<!-- Hero Left Column: Copy, WhatsApp CTA & Trust Badges -->
-<div class="lg:col-span-7 flex flex-col items-start pr-0 lg:pr-6 space-y-4 sm:space-y-6">
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 lg:py-16 w-full"><div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<div class="lg:col-span-7 flex flex-col items-start pr-0 lg:pr-6 space-y-4 sm:space-y-6 order-1">
 <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary tracking-tight leading-[1.12] sm:leading-[1.1] font-normal">
           We don't source honey.<br>
 <span class="block sm:inline mt-1 sm:mt-0 text-[1.3em] sm:text-[1.25em] leading-none font-normal" style="font-family: Whisper, cursive; color: rgb(181, 101, 29);">We keep bees.</span>
 </h1>
+<div class="lg:hidden w-full my-2">
+<div class="bg-surface-container-lowest p-3 sm:p-4 rounded border border-border-subtle relative shadow-none">
+<div class="absolute top-5 left-5 sm:top-6 sm:left-6 z-10 bg-surface/95 text-primary border border-primary/20 text-[10px] sm:text-xs font-semibold tracking-wider uppercase px-2.5 py-1 rounded inline-flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full inline-block shrink-0 bg-secondary"></span>
+<span class="">LOT 2026 • SINGLE ORIGIN • KUMAON RESERVE</span>
+</div>
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden rounded">
+<img alt="Beekeeper inspecting a honeycomb frame" class="w-full h-full object-cover" src="hero_image.png">
+</div>
+</div>
+</div>
 <p class="text-sm sm:text-base md:text-lg text-on-surface-variant max-w-xl leading-relaxed">
           Traceable, single-origin raw honey from our family's migratory hives in the Kumaon forests. Harvested once a year with reverent minimal intervention.
         </p>
-<!-- WhatsApp Primary CTA & Direct Shipping Note -->
 <div class="pt-1 w-full sm:w-auto">
 <a class="inline-flex items-center justify-center gap-2 bg-secondary text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded text-sm sm:text-base font-semibold tracking-wide hover:bg-secondary-container transition-colors w-full sm:w-auto text-center shadow-none" href="https://wa.me/919411123561?text=Hi%2C%20I'd%20like%20to%20know%20more%20about%20Oakbee%20honey%20and%20place%20an%20order." rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[20px]">chat</span>
@@ -131,9 +139,7 @@
 <span class="">Direct from our family hives to your table • Pan-India dispatch</span>
 </p>
 </div>
-<!-- 3 Trust Badges -->
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full pt-4 sm:pt-6 border-t border-border-subtle">
-<!-- Badge 1 -->
 <div class="bg-surface-container-lowest p-3.5 sm:p-4 rounded border border-border-subtle flex items-center sm:items-start gap-3">
 <div class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-secondary/10 text-secondary">
 <span class="material-symbols-outlined text-[20px]">nest_multi_room</span>
@@ -143,7 +149,6 @@
 <p class="text-xs sm:text-sm text-on-surface-variant">No bulk traders</p>
 </div>
 </div>
-<!-- Badge 2 -->
 <div class="bg-surface-container-lowest p-3.5 sm:p-4 rounded border border-border-subtle flex items-center sm:items-start gap-3">
 <div class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-secondary/10 text-secondary">
 <span class="material-symbols-outlined text-[20px]">location_on</span>
@@ -153,7 +158,6 @@
 <p class="text-xs sm:text-sm text-on-surface-variant">Wild forest bloom</p>
 </div>
 </div>
-<!-- Badge 3 -->
 <div class="bg-surface-container-lowest p-3.5 sm:p-4 rounded border border-border-subtle flex items-center sm:items-start gap-3">
 <div class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-secondary/10 text-secondary">
 <span class="material-symbols-outlined text-[20px]">verified</span>
@@ -165,21 +169,18 @@
 </div>
 </div>
 </div>
-<!-- Hero Right Column: Honeycomb Inspection Frame -->
-<div class="lg:col-span-5 relative w-full mt-4 lg:mt-0">
+<div class="hidden lg:block lg:col-span-5 relative w-full mt-4 lg:mt-0 order-2">
 <div class="bg-surface-container-lowest p-3 sm:p-4 rounded border border-border-subtle relative shadow-none">
-<!-- Lot Badge Overlay -->
 <div class="absolute top-5 left-5 sm:top-6 sm:left-6 z-10 bg-surface/95 text-primary border border-primary/20 text-[10px] sm:text-xs font-semibold tracking-wider uppercase px-2.5 py-1 rounded inline-flex items-center gap-1.5 shadow-sm">
 <span class="w-1.5 h-1.5 rounded-full inline-block shrink-0 bg-secondary"></span>
 <span class="">LOT 2026 • SINGLE ORIGIN • KUMAON RESERVE</span>
 </div>
 <div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden rounded">
-<img alt="Beekeeper inspecting a honeycomb frame filled with bees" class="w-full h-full object-cover rounded" src="hero_image.png">
+<img alt="Beekeeper inspecting a honeycomb frame" class="w-full h-full object-cover" src="hero_image.png">
 </div>
 </div>
 </div>
-</div>
-</section>
+</div></section>
 <!-- 2. TRACEABILITY PROTOCOL -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-10 sm:pb-16">
 <div class="bg-surface-container-lowest rounded border border-border-subtle p-5 sm:p-8">
@@ -254,9 +255,6 @@
 <!-- Image Container with overlay -->
 <div class="relative aspect-video bg-surface-container rounded overflow-hidden mb-5">
 <img alt="Wild Forest Honey" class="w-full h-full object-cover" src="Wild_forest_honey.png">
-<div class="absolute inset-0 bg-primary/30 backdrop-blur-[1px] flex items-center justify-center">
-
-</div>
 </div>
 <h3 class="font-serif text-2xl sm:text-3xl text-primary font-medium">Wild Forest Honey</h3>
 <p class="font-script text-secondary text-2xl sm:text-3xl mt-0.5 mb-2 leading-none">One forest. One harvest. Once a year.</p>
@@ -264,9 +262,7 @@
             Our spring harvest from the Kumaon forests is sold out. Wild Forest Honey is harvested once a year from our own hives, so the next jars arrive with the spring 2027 harvest.
           </p>
 <!-- Specification List -->
-
 <!-- Radio options for Spring 2027 reserve -->
-
 </div>
 <!-- Reserve WhatsApp Button -->
 <div class="pt-2">
@@ -297,7 +293,6 @@
             Harvested from golden winter blossoms. Pale buttery color, fast-crystallizing, unheated raw nectar with a velvet mouthfeel and delicate floral sweetness.
           </p>
 <!-- Authenticity Note Callout -->
-
 <!-- Independent Quantity Steppers -->
 <div class="space-y-2.5 mb-5">
 <div class="flex items-center justify-between">
@@ -358,7 +353,7 @@
 </button>
 <a class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded bg-secondary text-white font-semibold text-xs sm:text-sm hover:bg-secondary-container transition-colors text-center shadow-none" href="https://wa.me/919411123561?text=Hi%2C%20I'd%20like%20to%20know%20more%20about%20Oakbee%20honey%20and%20place%20an%20order." id="mustard-order-btn" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">chat</span>
-<span id="mustard-btn-text" class="">WhatsApp Order</span>
+<span class="" id="mustard-btn-text">WhatsApp Order</span>
 </a>
 </div>
 </div>
@@ -384,10 +379,6 @@
 </div>
 <!-- Sample Quick Click Chips -->
 <div class="flex items-center justify-center gap-2 mt-3 text-xs sm:text-sm text-on-surface-variant">
-
-
-
-
 </div>
 <!-- Authenticated Ledger Card -->
 <div class="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-border-subtle bg-surface-container-low p-4 sm:p-6 rounded" id="batch-ledger">
@@ -396,7 +387,6 @@
 <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
 <span class="text-[11px] sm:text-xs uppercase font-semibold text-primary tracking-widest" id="ledger-title">BATCH #OB-WF001</span>
 </div>
-
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-xs sm:text-sm">
 <div class="space-y-1">
@@ -554,7 +544,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
 <!-- Video Card 1 -->
-<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden group">
+<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden group" onclick="openPopup('DdhRC6kTS70')" style="cursor: pointer;">
 <div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
 <img alt="Post-Monsoon Hive Inspection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="Hive_Inspection_reel.png">
 <div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
@@ -573,7 +563,7 @@
 </div>
 </div>
 <!-- Video Card 2 -->
-<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden group">
+<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden group" onclick="openPopup('DbVHy8nxQrm')" style="cursor: pointer;">
 <div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
 <img alt="Hand-Straining Raw Honey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="Straining_reel.png">
 <div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
@@ -592,7 +582,7 @@
 </div>
 </div>
 <!-- Video Card 3 -->
-<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden group">
+<div class="bg-surface-container-lowest rounded border border-border-subtle overflow-hidden group" onclick="openPopup('Dam7CR3RbXn')" style="cursor: pointer;">
 <div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
 <img alt="Night Transport for Winter Forage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="Migration_reel.png">
 <div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
@@ -679,7 +669,7 @@
 <!-- Interactive Toast Notification -->
 <div class="fixed bottom-6 right-6 z-50 bg-primary text-white px-4 py-3 rounded shadow-lg border border-white/10 flex items-center gap-2.5 text-xs sm:text-sm transition-all duration-300 opacity-0 pointer-events-none translate-y-4" id="cart-toast">
 <span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
-<span id="cart-toast-msg" class="">Added to your apothecary cart</span>
+<span class="" id="cart-toast-msg">Added to your apothecary cart</span>
 </div>
 <!-- FOOTER -->
 <footer class="w-full py-10 sm:py-14 border-t border-white/10 text-surface" style="background-color: #1A3E26;">
@@ -696,8 +686,8 @@
 <div class="md:col-span-6 flex flex-col md:flex-row md:justify-end gap-6 sm:gap-10 text-xs sm:text-sm">
 <div class="flex flex-col gap-2"><span class="text-[11px] uppercase tracking-wider text-surface/50 font-semibold">Provenance &amp; Safety</span>
 <span class="text-surface/80">FSSAI - 22626038000444</span>
-<a href="#batch-section" class="text-surface/80 hover:text-white hover:underline transition-colors">Traceability Batch Search</a>
-<a href="https://wa.me/919411123561?text=Hi%2C%20I'd%20like%20to%20know%20more%20about%20Oakbee%20honey." target="_blank" rel="noopener noreferrer" class="text-surface/80 hover:text-white hover:underline transition-colors">Direct WhatsApp Support</a></div>
+<a class="text-surface/80 hover:text-white hover:underline transition-colors" href="#batch-section">Traceability Batch Search</a>
+<a class="text-surface/80 hover:text-white hover:underline transition-colors" href="https://wa.me/919411123561?text=Hi%2C%20I'd%20like%20to%20know%20more%20about%20Oakbee%20honey." rel="noopener noreferrer" target="_blank">Direct WhatsApp Support</a></div>
 </div>
 </div>
 <!-- Copyright & Bottom Tag -->
@@ -1100,8 +1090,39 @@
   updateMustardCardActionState();
 })();
 </script>
-
-
+<div class="modal-overlay" id="instagramModal" onclick="closePopup(event)" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); z-index: 1000; justify-content: center; align-items: center;">
+<div class="modal-content" onclick="event.stopPropagation()" style="background: white; padding: 10px; border-radius: 12px; position: relative; max-width: 450px; width: 90%; display: flex; flex-direction: column; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+<span class="close-btn" onclick="closePopup(event)" style="position: absolute; top: -35px; right: 0px; font-size: 30px; font-weight: bold; cursor: pointer; color: #fff; z-index: 1001; user-select: none;">×</span>
+<iframe allowtransparency="true" frameborder="0" height="600" id="instagramFrame" scrolling="no" src="" width="100%"></iframe>
+</div>
+</div><script>
+function openPopup(reelId) {
+  const id = reelId || 'DdhRC6kTS70';
+  const modal = document.getElementById('instagramModal');
+  const iframe = document.getElementById('instagramFrame');
+  if (iframe) {
+    iframe.src = 'https://www.instagram.com/reel/' + id + '/embed/';
+  }
+  if (modal) {
+    modal.style.display = 'flex';
+  }
+}
+function closePopup(event) {
+  const modal = document.getElementById('instagramModal');
+  const iframe = document.getElementById('instagramFrame');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+  if (iframe) {
+    iframe.src = '';
+  }
+}
+window.openPopup = openPopup;
+window.closePopup = closePopup;
+window.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closePopup();
+});
+</script>
 
 
 </body></html>
